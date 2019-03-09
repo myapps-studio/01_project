@@ -1,7 +1,19 @@
+@import 'variables'
+@import 'mixins'
+@import '_normalize'
+@import '_layout'
+
+/* Components */
+import "components/form_field";
+
+/* Sections */
+import "section/registration_form";
+
+/* Pages / Views */
+import "pages/registration";
+
 body {
 	display: flex;
 	flex-wrap: wrap;
-	
 }
 
-@import '_test'

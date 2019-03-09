@@ -13,13 +13,12 @@
     "build": "npm-run-all build:* test",
 	"build:clean": "rimraf css/*.css",
     "build:sass": "node-sass --output-style compact -o css sass",
-    "build:autoprefixer": "autoprefixer-cli css/style.css",
+    "build:autoprefixer": "globstar autoprefixer-cli css/*.css",
     "build-dev:sass": "node-sass --output-style expanded --source-map true -o css sass",
     "watch": "npm-run-all build -p watch:sassprefixer watch:browsersync",
-	"watch:sassprefixer": "onchange npm-run-all watch:sass -- watch:autoprefixer",
-	"watch:sass": "node-sass --output-style expanded --source-map true -o css sass",
-    "watch:autoprefixer": "onchange -d 100 css/style.css -- autoprefixer-cli -o css/style.css && npm run build:autoprefixer",
-    "watch:browsersync": "browser-sync start --server --files css/*.css"
+	"watch:sassprefixer": "onchange npm-run-all build-dev:sass -- watch:autoprefixer",
+    "watch:autoprefixer": "globstar onchange -d 100 css/*.css -- build:autoprefixer",
+    "watch:browsersync": "browser-sync start --server --files index.html css/*.css"
   },
   "repository": {
     "type": "git",

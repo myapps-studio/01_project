@@ -1,0 +1,25 @@
+nav {
+    float: bottom;
+    
+    > ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+    
+        > li {
+            left: 50px;
+            > a {
+                line-height: 50px;
+                display: block;
+                color: $nav-fn;
+                text-decoration: none;
+                margin: 0;
+            }
+
+            > a:hover {
+                background-color: #979797;
+                color: white;   
+            }
+        }
+    }
+}

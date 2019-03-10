@@ -1,19 +1,38 @@
-@import 'variables'
-@import 'mixins'
-@import '_normalize'
-@import '_layout'
 
-/* Components */
-import "components/form_field";
+/*Import files*/
+
+    @import 'variables';
+    @import 'mixins';
+    @import 'normalize';
+    @import 'layout';
 
 /* Sections */
-import "section/registration_form";
 
-/* Pages / Views */
-import "pages/registration";
+    @import "sections/right-section";
+    @import "sections/left-section";
 
-body {
-	display: flex;
-	flex-wrap: wrap;
-}
+    @import "sections/sidebar";
+    @import "sections/main-content";
+    @import "sections/top-bar";
 
+/* Components */
+
+    /* left-section */
+    @import "components/header";
+    @import "components/nav";
+    @import "components/persons";
+
+    /* right-section */
+    /* top-bar */
+
+    /* main-content */
+
+/* Icons */
+/*
+    @import "images/general";
+    @import "images/details";
+    @import "images/links";
+    @import "images/banners";
+    @import "images/personaldata";
+    @import "images/postback";
+*/

@@ -4,16 +4,62 @@
 		<meta charset="UTF-8">
 		<!-- fonts -->
 		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Nothing+You+Could+Do" rel="stylesheet">
 		<!-- css -->
 		<link rel="stylesheet" href="css/style.css" type="text/css">
 	</head>
 	<body class="row">
 		<section class="left-section col-2">
 			<section class="sidebar col-2">
-				<div class="header">
-					<h1>Just do it</h1>
+				<div class="header col-12">
+					<div class="title col-9"> 
+						<h1>Just do it</h1>
+					</div>
 					<!-- icon -->
+					<input id="menuToggle" type="checkbox">
+					<label for="menuToggle"></label>
+					<nav class="nav-menu col-12">
+						<ul>
+							<li><img class="tag-hover" src="images/tag_hover.png"><img class="nav-icon" src="images/general.svg"><a href="#">General</a></li>
+							<li><img class="tag-hover" src="images/tag_hover.png"><img class="nav-icon" src="images/details.svg"><a href="#">Details</a></li>
+							<li><img class="tag-hover" src="images/tag_hover.png"><img class="nav-icon" src="images/links.svg"><a href="#">Links</a></li>
+							<li><img class="tag-hover" src="images/tag_hover.png"><img class="nav-icon" src="images/banners.svg"><a href="#">Banners</a></li>
+							<li><img class="tag-hover" src="images/tag_hover.png"><img class="nav-icon" src="images/personaldata.svg"><a href="#">Personal data</a></li>
+							<li><img class="tag-hover" src="images/tag_hover.png"><img class="nav-icon" src="images/payout.svg"><a href="#">Payout</a></li>
+							<li><img class="tag-hover" src="images/tag_hover.png"><img class="nav-icon" src="images/postback.svg"><a href="#">Postback</a></li>
+						</ul>
+					</nav>
+					<div class="persons col-12">		
+						<h1>YOUR MANAGER<h1>
+						<ul>
+							<li><img src="images/test_profile.png"><a href="#">Mikhael E.</a></li>
+						</ul>
+					</div>
 				</div>
+			</section>
+		</section>
+		<section class="right-section col-offset-2 col-10 col-m-12">	
+			<!-- top bar for min-width media 768px -->
+			<section class="top-bar col-12">
+				<div class="col-6 blank">
+				</div>
+				<div class="col-2 wallet">
+					<img src="images/wallet.svg">
+					<h1>1500 $</h1>
+				</div>
+				<div class="col-1 notification">
+					<img src="images/notification.svg">
+				</div>
+				<div class="col-2 personaldata">
+					<img src="images/personaldata.svg">
+					<h1>Leonardo di Caprio</h1>
+				</div>
+				<div class="col-1 quit">
+					<img src="images/quit.svg">
+				</div>				
+			</section>
+			<!-- top bar for max-width media 767px -->
+			<section class="top-bar-mobile">
 				<nav>
 					<ul>
 						<li><i class="fa general"></i><a href="#">General</a></li>
@@ -25,19 +71,51 @@
 						<li><a href="#">Postback</a></li>
 					</ul>
 				</nav>
-				<div class="persons">		
-					<!-- chat -->
-					here person!!!!
+			</section>
+			<section class="main-content">
+				<div class="general_statistic col-12">
+					<div class="gs-header">
+						<h1>GENERAL STATISTIC</h1>
+					</div>
+					<div class="gs-dates">
+						<div class="col-2">
+							date1
+						</div>
+						<div class="col-2">
+							date2
+						</div>
+						<div class="col-1">
+							refresh-btn
+						</div>
+					</div>
+					<div class="gs-statistics">
+						<div class="col-3">
+							statistic1
+						</div>
+						<div class="col-3">
+							statistic2
+						</div>
+					</div>
+					<div class="gs-2nd-header">
+						<div class="col-6">
+							<h1>Earnings chart</h1>
+						</div>
+					</div>
+					<div class="indicators">
+						indicators
+					</div>
+					<div class="chart">
+						chart
+					</div>	
+				</div>
+			</section>
+			<section class="main-content">
+				<div class="links">
+					links
 				</div>
 			</section>
 		</section>
-		<section class="right-section col-offset-2 col-10">	
-			<section class="top-bar">
-				top-bar
-			</section>
-			<section class="main-content">
-				main-content
-			</section>
-		</section>
+		<!-- JS -->
+		<script src="js/script.js" defer></script>
 	</body>
 </html>

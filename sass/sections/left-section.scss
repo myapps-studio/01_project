@@ -3,3 +3,15 @@
     padding: 0;
     display: block;
 }
+
+/* media grid*/
+
+@media (max-width: 767px) {
+    .left-section {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) {
+
+}

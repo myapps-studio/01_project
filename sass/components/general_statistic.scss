@@ -1,0 +1,48 @@
+
+.general_statistic {
+    margin: 0;
+    padding: 0;
+}
+
+.gs-header {
+    margin: 0;
+    padding: 10px 15px;
+    font-size: 12px;
+    height: 70px;
+    border-bottom: 1px solid $menu-fn;
+}
+
+.gs-dates {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    border-bottom: 1px solid $menu-fn;
+
+    > div {
+        border: 1px solid red;
+    }
+}
+
+.gs-statistics {
+    display: flex;
+    justify-content: center;
+
+    > div {
+        border: 1px solid red;
+    }
+}
+
+.gs-2nd-header {
+    margin: 0;
+    padding: 10px 15px;
+    font-size: 12px;
+    height: 40px;
+}
+
+.indicators {
+
+}
+
+.chart {
+
+}

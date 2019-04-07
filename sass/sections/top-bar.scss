@@ -2,7 +2,45 @@
 .top-bar {
     background-color: $top-bar-bg-color;
     height: 60px;
-    border: $test-border;
+    border-bottom: 1px solid $menu-fn;
     margin: 0;
     padding: 0;
+    display: inline-flex;
+    
+}
+
+/* media grid */
+
+@media (max-width: 767px) {
+    .top-bar{
+        display: none;
+    }
+}
+
+@media (min-width: 768px) {
+    .blank, .wallet, .notification, .personaldata, .quit {
+        margin: 0;
+        padding: 0;
+        border-right: 1px solid $menu-fn;
+        height: 60px;
+        text-align: center;
+        position: center;
+    }
+
+    .wallet, .notification, .personaldata, .quit {
+        
+        > h1 {
+            font-size: 20px;
+            float: right;
+            margin: 0;
+            padding: 15px 20px;
+        }
+
+        > img {
+            height: 40px;
+            width: 40px;
+            margin: 0;
+            padding-top: 15px;
+        }
+    }
 }

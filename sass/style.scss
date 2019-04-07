@@ -14,11 +14,13 @@
     @import "sections/sidebar";
     @import "sections/main-content";
     @import "sections/top-bar";
+    @import "sections/top-bar-mobile";
 
 /* Components */
 
     /* left-section */
     @import "components/header";
+    @import "components/menu";
     @import "components/nav";
     @import "components/persons";
 
@@ -26,13 +28,5 @@
     /* top-bar */
 
     /* main-content */
-
-/* Icons */
-/*
-    @import "images/general";
-    @import "images/details";
-    @import "images/links";
-    @import "images/banners";
-    @import "images/personaldata";
-    @import "images/postback";
-*/
+    @import "components/general_statistic";
+    @import "components/links";

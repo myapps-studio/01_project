@@ -1,25 +1,107 @@
-nav {
-    float: bottom;
+
+/* media grid*/
+/* mobile */
+@media (max-width: 767px) {
+    nav {
+        float: left;
+        
+        > ul {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+        
+            > li {
+                left: 50px;
+                > a {
+                    line-height: 50px;
+                    display: inline-block;
+                    color: $nav-fn;
+                    text-decoration: none;
+                    margin: 0;
+                }
     
-    > ul {
-        margin: 0;
-        padding: 0;
-        list-style-type: none;
+                > a:hover {
+                    background-color: #979797;
+                    color: white;   
+                }
+            }
+        }
+    } 
+}
+
+/* not mobile */
+@media (min-width: 768px) {
+    nav {
+        float: left;
+        border-bottom: 1px solid $menu-fn;
+        
+        > ul {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+        
+            > li {
+                
+                > a {
+                    display: block;
+                    padding: 15px 0;
+                    padding-left: 20px;
+                    color: $menu-fn;
+                    width: 100%;
+                    margin: 0 auto;
+                    text-decoration: none;
+                }
     
-        > li {
-            left: 50px;
-            > a {
-                line-height: 50px;
-                display: block;
-                color: $nav-fn;
-                text-decoration: none;
-                margin: 0;
+                > a:hover {
+                    color: white;
+                    background: $menu-fn;   
+                }
             }
 
-            > a:hover {
-                background-color: #979797;
-                color: white;   
+            > li:last-child a {
+                border-bottom: none;
             }
         }
     }
+    
+    #menuToggle:checked ~ .nav-menu {
+        position: absolute;
+        top: 0;
+    }
+
+    #menuToggle:checked ~ .persons {
+        display: none;
+    }
+
+    .nav-menu {
+        height: auto;
+        position: absolute;
+        top: -1000px;
+        transition: all .7s ease-in-out;
+        margin: 0 auto;
+        border-radius: 5px;
+        opacity: 0.8;
+        padding: 70px 0;
+     }
+
+     .nav-icon {
+        width: 20px;
+        height: 20px;
+        float: left;
+        display: block;
+        margin: 0;
+        margin-top: 12px;
+        margin-right: 10px;
+        margin-left: 10px;
+        padding: 0;
+     }
+
+     .tag-hover {
+         float: left;
+         display: block;
+         height: 49px;
+         width: 15px;
+         margin: 0;
+         padding: 0;
+     }
 }

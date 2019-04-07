@@ -1,8 +1,17 @@
 .sidebar {
     background-color: $sidebar-bg-color;
-    border: $test-border;
     position: fixed;
     margin: 0;
     padding: 0;
     height: 100%;
+}
+
+/* media grid*/
+
+@media (max-width: 767px) {
+
+}
+
+@media (min-width: 768px) {
+
 }

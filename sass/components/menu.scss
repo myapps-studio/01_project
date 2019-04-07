@@ -1,0 +1,53 @@
+input {
+    float: right;
+    padding-top: 100px;
+    margin: 0;
+}
+
+/* hiding the checkbox */
+#menuToggle {
+   display: none;
+}
+
+/* hamburger menu */
+label {
+   cursor: pointer;
+   
+   margin: 15px 15px;
+   margin-top: 35px;
+   z-index: 1;
+   right: 0;
+}
+
+label:before {
+   transform: translateY(-20px);
+}
+
+label:after {
+   transform: translateY(20px);
+}
+
+label:before,
+label:after, label {
+   position: absolute;
+   width: 50px;
+   height: 5px;
+   background: $menu-fn;
+   content: "";
+   border-radius: 4px;
+   transition: 0.6s;
+}
+
+/* Animation when checked */
+#menuToggle:checked + label {
+   width: 0px;
+   right: 50px;
+}
+
+#menuToggle:checked + label:before {
+   transform: rotate(45deg);
+}
+
+#menuToggle:checked + label:after {
+   transform: rotate(-45deg);
+}

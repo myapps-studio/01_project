@@ -1,3 +1,32 @@
 .persons {
-    border: $test-border;
+    color: $menu-fn;
+    font-size: 10px;
+    top: 100px;
+    position: absolute;
+    padding: 10px 15px;
+    border-top: 1px solid $menu-fn;
+    > h1 {
+
+        > ul {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+
+            > li {
+
+                > a {
+                    margin: 0 auto;
+                    text-decoration: none;
+                    display: inline-block;
+                    padding-left: 10px;
+                    color: $persons-fn;;
+                }
+
+                > img {
+                    display: inline-block;
+                }
+            }
+        }
+    }
 }
+

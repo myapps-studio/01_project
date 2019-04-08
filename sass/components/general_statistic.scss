@@ -20,29 +20,47 @@
 
     > div {
         border: 1px solid red;
+        margin-bottom: 20px;
     }
 }
 
 .gs-statistics {
     display: flex;
     justify-content: center;
+    margin-top: 20px;
 
     > div {
         border: 1px solid red;
+        margin-bottom: 60px;
     }
 }
 
 .gs-2nd-header {
     margin: 0;
-    padding: 10px 15px;
-    font-size: 12px;
+    font-size: 10px;
     height: 40px;
+    display: flex;
+    justify-content: center;
 }
 
 .indicators {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
 
+    > div {
+        border: 1px solid red;
+        margin-bottom: 20px;
+        text-align: center;
+    }
 }
 
 .chart {
+    display: flex;
+    justify-content: center;
 
+    > div {
+        background: url("images/chart_demo.png") no-repeat center;
+        background-size: cover;
+    }
 }

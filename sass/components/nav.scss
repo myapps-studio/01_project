@@ -104,4 +104,10 @@
          margin: 0;
          padding: 0;
      }
+
+     svg {
+         background: url('images/general.svg');
+         background-size: cover;
+         fill: white;
+     }
 }

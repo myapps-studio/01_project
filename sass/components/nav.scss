@@ -9,9 +9,10 @@
             margin: 0;
             padding: 0;
             list-style-type: none;
-        
+            
             > li {
                 left: 50px;
+                              
                 > a {
                     line-height: 50px;
                     display: inline-block;
@@ -42,10 +43,10 @@
         
             > li {
                 
+
                 > a {
                     display: block;
                     padding: 15px 0;
-                    padding-left: 20px;
                     color: $menu-fn;
                     width: 100%;
                     margin: 0 auto;
@@ -54,7 +55,8 @@
     
                 > a:hover {
                     color: white;
-                    background: $menu-fn;   
+                    background: $menu-fn;
+                    border-left: 15px solid orange; 
                 }
             }
 
@@ -92,22 +94,8 @@
         margin: 0;
         margin-top: 12px;
         margin-right: 10px;
-        margin-left: 10px;
+        margin-left: 15px;
         padding: 0;
-     }
-
-     .tag-hover {
-         float: left;
-         display: block;
-         height: 49px;
-         width: 15px;
-         margin: 0;
-         padding: 0;
-     }
-
-     svg {
-         background: url('images/general.svg');
-         background-size: cover;
-         fill: white;
+        fill: $menu-fn;
      }
 }

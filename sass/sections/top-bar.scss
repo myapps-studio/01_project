@@ -6,7 +6,8 @@
     margin: 0;
     padding: 0;
     display: inline-flex;
-    
+    flex-wrap: nowrap;
+    justify-content: flex-end;
 }
 
 /* media grid */
@@ -24,21 +25,22 @@
         border-right: 1px solid $menu-fn;
         height: 60px;
         text-align: center;
-        position: center;
-    }
 
-    .wallet, .notification, .personaldata, .quit {
-        
         > h1 {
             font-size: 18px;
-            float: right;
             margin: 0;
-            padding: 15px 20px;
+
+            > img {
+                height: 35px;
+                width: 35px;
+                margin: 0;
+                padding-top: 15px;
+            }
         }
 
         > img {
-            height: 40px;
-            width: 40px;
+            height: 35px;
+            width: 35px;
             margin: 0;
             padding-top: 15px;
         }

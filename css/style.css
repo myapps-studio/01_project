@@ -178,7 +178,7 @@ body {
   background-color: white;
   margin: 20px;
   padding: 0;
-  height: 800px;
+  height: 900px;
 }
 
 /* media grid*/
@@ -190,6 +190,10 @@ body {
   padding: 0;
   display: -ms-inline-flexbox;
   display: inline-flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -ms-flex-pack: end;
+      justify-content: flex-end;
 }
 
 /* media grid */
@@ -206,17 +210,20 @@ body {
     border-right: 1px solid #999999;
     height: 60px;
     text-align: center;
-    position: center;
   }
-  .wallet > h1, .notification > h1, .personaldata > h1, .quit > h1 {
+  .blank > h1, .wallet > h1, .notification > h1, .personaldata > h1, .quit > h1 {
     font-size: 18px;
-    float: right;
     margin: 0;
-    padding: 15px 20px;
   }
-  .wallet > img, .notification > img, .personaldata > img, .quit > img {
-    height: 40px;
-    width: 40px;
+  .blank > h1 > img, .wallet > h1 > img, .notification > h1 > img, .personaldata > h1 > img, .quit > h1 > img {
+    height: 35px;
+    width: 35px;
+    margin: 0;
+    padding-top: 15px;
+  }
+  .blank > img, .wallet > img, .notification > img, .personaldata > img, .quit > img {
+    height: 35px;
+    width: 35px;
     margin: 0;
     padding-top: 15px;
   }
@@ -355,7 +362,6 @@ label:after, label {
   nav > ul > li > a {
     display: block;
     padding: 15px 0;
-    padding-left: 20px;
     color: #999999;
     width: 100%;
     margin: 0 auto;
@@ -364,6 +370,7 @@ label:after, label {
   nav > ul > li > a:hover {
     color: white;
     background: #999999;
+    border-left: 15px solid orange;
   }
   nav > ul > li:last-child a {
     border-bottom: none;
@@ -393,21 +400,9 @@ label:after, label {
     margin: 0;
     margin-top: 12px;
     margin-right: 10px;
-    margin-left: 10px;
+    margin-left: 15px;
     padding: 0;
-  }
-  .tag-hover {
-    float: left;
-    display: block;
-    height: 49px;
-    width: 15px;
-    margin: 0;
-    padding: 0;
-  }
-  svg {
-    background: url("images/general.svg");
-    background-size: cover;
-    fill: white;
+    fill: #999999;
   }
 }
 
@@ -431,7 +426,7 @@ label:after, label {
   text-decoration: none;
   display: inline-block;
   padding-left: 10px;
-  color: #29353d;
+  color: #999999;
 }
 
 .persons > h1 > ul > li > img {
@@ -459,13 +454,29 @@ label:after, label {
   display: flex;
   -ms-flex-pack: center;
       justify-content: center;
-  margin-top: 20px;
+  margin-top: 30px;
   border-bottom: 1px solid #999999;
+  margin-bottom: 60px;
 }
 
-.gs-dates > div {
-  border: 1px solid red;
-  margin-bottom: 20px;
+.gs-dates > .date {
+  border: 1px solid #999999;
+  margin-bottom: 30px;
+  padding: 10px 10px;
+}
+
+.gs-dates > .date > img {
+  width: 20px;
+  height: 20px;
+  float: right;
+}
+
+.gs-dates > .refresh-btn > button {
+  width: 40px;
+  height: 40px;
+  background: darkorange;
+  fill: white;
+  margin-left: 10px;
 }
 
 .gs-statistics {
@@ -473,22 +484,38 @@ label:after, label {
   display: flex;
   -ms-flex-pack: center;
       justify-content: center;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 .gs-statistics > div {
-  border: 1px solid red;
-  margin-bottom: 60px;
+  border-bottom: 1px solid #999999;
+  margin-bottom: 15px;
+  margin-right: 40px;
+}
+
+.gs-statistics > div > h4 {
+  padding: 5px 5px;
+  margin: 0;
+  float: right;
+}
+
+.gs-statistics > div > h3 {
+  padding: 5px 5px;
+  margin: 0;
+  float: left;
+  color: #999999;
+  font-weight: bold;
 }
 
 .gs-2nd-header {
   margin: 0;
   font-size: 10px;
   height: 40px;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: center;
-      justify-content: center;
+}
+
+.gs-2nd-header > div {
+  margin-top: 60px;
+  margin-left: 23%;
 }
 
 .indicators {
@@ -500,21 +527,18 @@ label:after, label {
 }
 
 .indicators > div {
-  border: 1px solid red;
+  background: #999999;
   margin-bottom: 20px;
+  margin-right: 20px;
   text-align: center;
+  padding: 15px 15px;
+  opacity: 0.7;
 }
 
-.chart {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: center;
-      justify-content: center;
-}
-
-.chart > div {
-  background: url("images/chart_demo.png") no-repeat center;
+.chart1 > div {
   background-size: cover;
+  text-align: center;
+  height: 300px;
 }
 
 .links {
@@ -530,9 +554,11 @@ label:after, label {
   margin-top: 20px;
 }
 
-.btn > div {
-  border: 1px solid red;
-  margin-bottom: 60px;
+.btn > button {
+  background: darkorange;
+  color: white;
+  height: 30px;
+  width: 100px;
 }
 
 .link-table {
@@ -542,5 +568,23 @@ label:after, label {
       justify-content: center;
   margin-top: 20px;
   margin-bottom: 20px;
+}
+
+td {
+  border-bottom: 1px solid #999999;
+  padding: 10px 10px;
+  width: 10%;
+  color: #999999;
+}
+
+td > a {
+  float: right;
+  color: blue;
+  text-align: left;
+}
+
+td:hover {
+  background: #999999;
+  color: white;
 }
 /*# sourceMappingURL=style.css.map */

@@ -1,17 +1,55 @@
 
 .top-bar-mobile {
     background-color: $top-bar-bg-color;
-    height: 60px;
-    border: $test-border;
+    border-bottom: 1px solid $menu-fn;
     margin: 0;
     padding: 0;
-    height: auto;
+    display: block;
+    height: 300px;
 }
-
 /* media grid*/
 
 @media (max-width: 767px) {
 
+    .header-m-1 {
+        display: inline-block;
+        border-bottom: 1px solid $menu-fn;
+        height: 100px;
+    }
+
+    .header-m-2 {
+        display: inline-block;
+        border-bottom: 1px solid $menu-fn;
+        height: 100px;
+    }
+
+    .wallet, .notification, .personaldata, .quit {
+        margin: 0;
+        padding: 0;
+        border-right: 1px solid $menu-fn;
+        float: left;
+        height: 100px;
+        text-align: center;
+
+        > h1 {
+            font-size: 18px;
+            margin: 0;
+
+            > img {
+                height: 35px;
+                width: 35px;
+                margin: 0;
+                padding-top: 15px;
+            }
+        }
+
+        > img {
+            height: 35px;
+            width: 35px;
+            margin: 0;
+            padding-top: 15px;
+        }
+    }
 }
 
 @media (min-width: 768px) {

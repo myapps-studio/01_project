@@ -5,7 +5,7 @@
     margin: 0;
     padding: 0;
     display: block;
-    height: 300px;
+    height: 400px;
 }
 /* media grid*/
 
@@ -15,12 +15,18 @@
         display: inline-block;
         border-bottom: 1px solid $menu-fn;
         height: 100px;
+        
     }
 
     .header-m-2 {
-        display: inline-block;
         border-bottom: 1px solid $menu-fn;
-        height: 100px;
+        height: 50px;
+
+        > h1 {
+            margin-left: 20px;
+            font-size: 36px;
+            font-family: 'Nothing You Could Do', cursive;
+        }
     }
 
     .wallet, .notification, .personaldata, .quit {

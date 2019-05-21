@@ -24,20 +24,50 @@
     margin-bottom: 20px;
 }
 
+
 td {
     border-bottom: 1px solid $menu-fn;
     padding: 10px 10px;
     width: 10%;
     color: $menu-fn;
+    margin: 0;
 
-    > a {
+    > div {
+            float: left;
+            margin-left: 20px;
+    }
+
+    > .right {
         float: right;
-        color: blue;
-        text-align: left;
+        
+        > svg {
+             display: none;
+        }
+
+        > a {
+            color: blue;
+            text-align: left;
+            text-decoration: none;
+        }
     }
   }
 
-  td:hover {
+td:hover {
       background: $menu-fn;
       color: white;
-  }
+
+    > .right {
+              
+        > a {
+            padding: 10px;
+        }
+
+        > svg {
+            display: block;
+            width: 20px;
+            height: 20px;
+            margin: 5px;
+            float: right;
+        }
+    }
+}
